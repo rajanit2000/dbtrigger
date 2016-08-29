@@ -5,7 +5,7 @@ Description: Database developer tool and its not recommended for end users
 Author: dbtrigger
 Version: 0.0.1
 Text Domain: db-trigger
-License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+License: GPL version 3
 */
 $db_trigger_plugin_dir = WP_PLUGIN_DIR . '/' . basename(dirname(__FILE__));
 $db_trigger_plugin_url = WP_PLUGIN_URL . '/' . basename(dirname(__FILE__));
@@ -43,7 +43,7 @@ if( !function_exists('trigger_set_trigger_page')){
 }
 if( !function_exists('trigger_compare_trigger_page')){
 	function trigger_compare_trigger_page(){
-		echo 'Sub Menu 2';
+		require_once "$iwp_mmb_plugin_dir/includes/db-trigger-compare.php"; 
 	}
 }
 
